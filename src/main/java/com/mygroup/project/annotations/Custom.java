@@ -5,16 +5,7 @@ import java.io.IOException;
 import com.mygroup.project.abs.Caller;
 
 public class Custom implements Caller {
-	@Override
-	@HandlerExceptionSet(exceptionSet = {
-			@HandleException(targetCatchHandler = Check.class, catchException = ArithmeticException.class),
-			@HandleException(targetCatchHandler = Check.class, catchException = NullPointerException.class) })
-	public void callMethod() throws Throwable {
-		System.out.println("Inside method 1");
-		int a = 13, b = 555;
-		System.out.println("The value is:" + b / a);
-	}
-
+	
 	@Override
 	@HandleException(targetCatchHandler = Check.class, catchException = Exception.class)
 	public void callMethod01() throws IOException {

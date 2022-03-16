@@ -10,10 +10,10 @@ public class CustomReader implements FileCaller {
 
 	@Override
 	@HandleException(targetCatchHandler = Check.class, catchException = Exception.class)
-	public void ReadLineByLineExample1() throws IOException {
+	public void ReadLineByLine() throws IOException {
 		try {
 			FileReader fr = new FileReader(
-					"D:/SB/march/custom annotations/simple-java-maven-app/src/main/java/com/mygroup/project/annotations/filename.txt");
+					"D:/SB/march/custom annotations/simple-java-maven-app/src/main/java/com/mygroup/project/annotations/filenam.txt");
 			BufferedReader br = new BufferedReader(fr);
 			StringBuffer sb = new StringBuffer();
 			String line;
