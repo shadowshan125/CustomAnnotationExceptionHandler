@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 import com.mygroup.project.abs.ExHandler;
 
 @Target({ ElementType.METHOD, ElementType.TYPE })
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 public @interface HandleException {
 	public Class<? extends ExHandler> targetCatchHandler();
 

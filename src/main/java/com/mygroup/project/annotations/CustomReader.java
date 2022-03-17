@@ -4,9 +4,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.mygroup.project.abs.FileCaller;
 
 public class CustomReader implements FileCaller {
+	private static final Logger log = LoggerFactory.getLogger(CustomReader.class);
 
 	@Override
 	@HandleException(targetCatchHandler = Check.class, catchException = Exception.class)
